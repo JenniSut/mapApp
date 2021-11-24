@@ -42,7 +42,7 @@ export default function App() {
   const getMap = () => {
 
     let key = input.replace(/\s+/g, '');
-    fetch(`https://www.mapquestapi.com/geocoding/v1/address?key=QHllj8TueiNQZxPxioSLPTfbEATpyXpx&location=${key}`)
+    fetch(`https://www.mapquestapi.com/geocoding/v1/address?key=YOURKEY&location=${key}`)
       .then(response => response.json())
       .then(responseJson => setRegion({ 
         latitude: responseJson.results[0].locations[0].displayLatLng.lat, 
